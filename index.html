@@ -225,12 +225,23 @@ color:#22d3ee;
 
 /* CONTACT */
 
-.contact{
-max-width:600px;
-margin:auto;
-}
+<p>📞 Call: <a href="tel:+19283990891">(928) 399-0891</a></p>
+<p>📧 Email: <a href="mailto:eniyooo358@gmail.com">eniyooo358@gmail.com</a></p>
+<form name="contact" method="POST" data-netlify="true">
 
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="tel" name="phone" placeholder="Phone Number">
+
+<textarea name="message" rows="5" placeholder="Tell us about your project"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
 input,textarea{
+  
 width:100%;
 padding:14px;
 margin-top:10px;
@@ -425,13 +436,11 @@ and marketing visuals for modern companies.
 
 <div class="contact">
 
-<form onsubmit="sendMessage(event)">
+<<form name="contact" method="POST" data-netlify="true">
 
-<input type="text" placeholder="Your Name" required>
-
-<input type="email" placeholder="Email Address" required>
-
-<textarea rows="5" placeholder="Tell us about your project"></textarea>
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<textarea name="message" rows="5" placeholder="Tell us about your project"></textarea>
 
 <button type="submit">Send Message</button>
 
@@ -456,12 +465,8 @@ const nav=document.getElementById("nav")
 nav.style.display=nav.style.display==="flex"?"none":"flex"
 }
 
-/* fake contact */
 
-function sendMessage(e){
-e.preventDefault()
-alert("Thanks! We'll contact you soon.")
-}
+
 
 /* custom cursor */
 
